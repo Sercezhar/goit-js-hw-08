@@ -6,7 +6,6 @@ const player = new Player(videoRef);
 
 const saveCurrentTime = function (time) {
   localStorage.setItem('videoplayer-current-time', time.seconds);
-  console.log(localStorage.getItem('videoplayer-current-time'));
 };
 player.on('timeupdate', throttle(saveCurrentTime, 1000));
 
